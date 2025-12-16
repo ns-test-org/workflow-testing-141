@@ -33,7 +33,7 @@ export default function TodoApp() {
     <div className="min-h-screen bg-gradient-to-br from-purple-500 via-pink-500 to-red-500 p-8">
       <div className="max-w-2xl mx-auto">
         <div className="bg-white rounded-2xl shadow-2xl p-8">
-          <h1 className="text-4xl font-bold text-gray-800 mb-8 text-center">
+          <h1 className="text-4xl font-bold text-red-600 mb-8 text-center">
             My Todo List
           </h1>
           
@@ -45,7 +45,7 @@ export default function TodoApp() {
               onChange={(e) => setInputValue(e.target.value)}
               onKeyPress={(e) => e.key === 'Enter' && addTodo()}
               placeholder="Add a new todo..."
-              className="flex-1 px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-purple-500 text-gray-800"
+              className="flex-1 px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-purple-500 text-red-600"
             />
             <button
               onClick={addTodo}
@@ -73,7 +73,7 @@ export default function TodoApp() {
                   />
                   <span
                     className={`flex-1 text-lg ${
-                      todo.completed ? 'line-through text-gray-400' : 'text-gray-800'
+                      todo.completed ? 'line-through text-gray-400' : 'text-red-600'
                     }`}
                   >
                     {todo.text}
@@ -91,7 +91,7 @@ export default function TodoApp() {
 
           {/* Stats */}
           {todos.length > 0 && (
-            <div className="mt-6 pt-6 border-t border-gray-200 text-center text-gray-600">
+            <div className="mt-6 pt-6 border-t border-gray-200 text-center text-red-600">
               <p>
                 {todos.filter(t => t.completed).length} of {todos.length} completed
               </p>
@@ -102,4 +102,8 @@ export default function TodoApp() {
     </div>
   );
 }
+
+
+
+
 
